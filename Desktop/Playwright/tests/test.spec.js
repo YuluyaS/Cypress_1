@@ -1,12 +1,8 @@
+const { chromium } = require("playwright");
 const { test, expect } = require("playwright");
 const { email, password } = require("../user");
 
 import { test, expect } from "@playwright/test";
-
-const browser = await chromium.launch({
-  headless: false,
-  slowMo: 5000,
-});
 
 test("test", async ({ page }) => {
   await page.goto("https://netology.ru/");

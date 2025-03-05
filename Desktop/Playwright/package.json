@@ -6,7 +6,7 @@
   "description": "home_work 3",
   "main": "index.js",
   "scripts": {
-    "test": "playwright"
+    "test": "playwright test"
   },
   "author": "Yuliya Svyatynina",
   "license": "ISC",
