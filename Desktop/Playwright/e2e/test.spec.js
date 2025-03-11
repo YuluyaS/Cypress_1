@@ -35,7 +35,7 @@ test("test", async ({ page }) => {
 
   //await expect(page.locator([userId, 7872227]));
 
-  const heading = page.locator("");
+  const heading = page.locator("?");
 
   await expect.heading.toContainText("Вы ввели неправильно логин или пароль");
 });
