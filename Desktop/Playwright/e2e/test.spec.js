@@ -33,9 +33,9 @@ test("test", async ({ page }) => {
   await page.getByRole("textbox", { name: "Пароль" }).fill("12345678");
   await page.getByTestId("login-submit-btn").click();
 
-  //await expect(page.locator([userId, 7872227]));
+ 
 
-  const heading = page.locator("?");
+  const heading = page.locator("login-error-hint");
 
   await expect.heading.toContainText("Вы ввели неправильно логин или пароль");
 });
