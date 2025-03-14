@@ -1,8 +1,6 @@
-const { chromium } = require("playwright");
 const { test, expect } = require("playwright");
-const { email, password } = require("../user");
+const { email, password } = require("…/tests/user");
 
-import { test, expect } from "@playwright/test";
 
 test("test", async ({ page }) => {
   await page.goto("https://netology.ru/");
@@ -17,10 +15,9 @@ test("test", async ({ page }) => {
 
   const heading = page.locator("//h2");
 
-  await expect.heading.toContainText("Моё обучение");
+  await expect.heading.toContainText('Моё обучение');
 });
 
-import { test, expect } from "@playwright/test";
 
 test("test", async ({ page }) => {
   await page.goto("https://netology.ru/");
