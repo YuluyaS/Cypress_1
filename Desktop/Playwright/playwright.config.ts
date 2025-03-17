@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig, devices } from "@playwright/test";
 
 /**
  * Read environment variables from file.
@@ -27,7 +27,7 @@ export default defineConfig({
   use: {
     launchOptions: {
       headless: false,
-      slowMo: 5000,
+      slowMo: 3000,
     },
 
     /* Base URL to use in actions like `await page.goto('/')`. */

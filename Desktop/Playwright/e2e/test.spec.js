@@ -1,8 +1,7 @@
-const { test, expect } = require("playwright");
-const { email, password } = require("…/tests/user");
+const { test, expect } = require("@playwright/test");
+const { email, password } = require("../tests/user");
 
-
-test("test", async ({ page }) => {
+test("test1", async ({ page }) => {
   await page.goto("https://netology.ru/");
   await page.getByRole("link", { name: "Войти" }).click();
   await page.getByRole("textbox", { name: "Email" }).click();
@@ -15,11 +14,13 @@ test("test", async ({ page }) => {
 
   const heading = page.locator("//h2");
 
-  await expect.heading.toContainText('Моё обучение');
+  await page.waitForSelector("text=Моё обучение", {timeout: 3000});
+  await expect(page.locator("text=Моё обучение")). toBeVisible();
+
 });
 
 
-test("test", async ({ page }) => {
+test("test2", async ({ page }) => {
   await page.goto("https://netology.ru/");
   await page.getByRole("link", { name: "Войти" }).click();
   await page.getByRole("textbox", { name: "Email" }).click();
@@ -34,5 +35,7 @@ test("test", async ({ page }) => {
 
   const heading = page.locator("login-error-hint");
 
-  await expect.heading.toContainText("Вы ввели неправильно логин или пароль");
+  await page.waitForSelector("text=Вы ввели неправильно логин или пароль", { timeout: 3000 });
+  await expect(page.locator("text=Вы ввели неправильно логин или пароль")).toBeVisible();
+  //await expect.heading.toContainText("text=Вы ввели неправильно логин или пароль");
 });
