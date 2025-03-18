@@ -5,7 +5,7 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/user.js/
+user.js
 /node_modules/
 
 
@@ -18,5 +18,4 @@ node_modules/
 
 # Local History for Visual Studio Code
 .history/
-/user.js/
 user.js

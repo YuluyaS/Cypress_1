@@ -14,11 +14,10 @@ test("test1", async ({ page }) => {
 
   const heading = page.locator("//h2");
 
-  await page.waitForSelector("text=Моё обучение", {timeout: 3000});
-  await expect(page.locator("text=Моё обучение")). toBeVisible();
-
+  //await page.waitForSelector("text=Моё обучение");
+  await page.waitForSelector("text=Моё обучение", { timeout: 40_000 });
+  await expect(page.locator("text=Моё обучение")).toBeVisible();
 });
-
 
 test("test2", async ({ page }) => {
   await page.goto("https://netology.ru/");
@@ -31,11 +30,14 @@ test("test2", async ({ page }) => {
   await page.getByRole("textbox", { name: "Пароль" }).fill("12345678");
   await page.getByTestId("login-submit-btn").click();
 
- 
-
   const heading = page.locator("login-error-hint");
 
-  await page.waitForSelector("text=Вы ввели неправильно логин или пароль", { timeout: 3000 });
-  await expect(page.locator("text=Вы ввели неправильно логин или пароль")).toBeVisible();
+  //await page.waitForSelector("text=Вы ввели неправильно логин или пароль");
+  await page.waitForSelector("text=Вы ввели неправильно логин или пароль", {
+    timeout: 40_000,
+  });
+  await expect(
+    page.locator("text=Вы ввели неправильно логин или пароль")
+  ).toBeVisible();
   //await expect.heading.toContainText("text=Вы ввели неправильно логин или пароль");
 });
