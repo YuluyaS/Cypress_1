@@ -1,0 +1,15 @@
+{
+  "name": "cypress_1",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Yuliya Svyatynina",
+  "type": "commonjs",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "cypress": "^14.2.1"
+  }
+}
